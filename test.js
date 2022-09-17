@@ -67,8 +67,8 @@ function startGame () {
 	} 
 	else if (typeof DeviceOrientationEvent !== 'undefined'){
 	    window.addEventListener('devicemotion', (event) => {
-				dx = event.accelerationIncludingGravity.x;
-				dy = event.accelerationIncludingGravity.y;
+				dx = -event.accelerationIncludingGravity.x;
+				dy = -event.accelerationIncludingGravity.y;
 			});
 	}
 }
